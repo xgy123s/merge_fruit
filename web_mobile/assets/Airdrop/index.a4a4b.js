@@ -1,0 +1,22 @@
+System.register("chunks:///_virtual/Airdrop",["./Airdrop.ts"],(function(){return{setters:[null],execute:function(){}}}));
+
+System.register("chunks:///_virtual/Airdrop.ts",["./rollupPluginModLoBabelHelpers.js","cc","./ActionUtil.ts","./NodeUtil.ts","./TimeUtil.ts","./BundleLayer.ts","./AudioManage.ts","./GameGlobal.ts"],(function(t){var e,i,n,o,a,r,l,s,u,c,h,p,b,g;return{setters:[function(t){e=t.applyDecoratedDescriptor,i=t.initializerDefineProperty},function(t){n=t.cclegacy,o=t.Label,a=t.Button,r=t.Node,l=t._decorator},function(t){s=t.default},function(t){u=t.NodeUtil},function(t){c=t.TimeUtil},function(t){h=t.default},function(t){p=t.AudioManage,b=t.SoundList},function(t){g=t.GameGlobal}],execute:function(){var y,d,f,m,L,A,w,B,z,v,D,_,C,F,G,I,M,k,x,O,S,U,E,N,j;n._RF.push({},"ada4fi2zspDhKKdW5i2YE4n","Airdrop",void 0);const{ccclass:H,property:K}=l;t("Airdrop",(y=H("Airdrop"),d=K(o),f=K(o),m=K(o),L=K(o),A=K(a),w=K(r),B=K(r),z=K(a),v=K(r),D=K(a),_=K(r),y((G=e((F=class extends h{constructor(){super(...arguments),i(this,"detailLabel",G,this),i(this,"targetLabel",I,this),i(this,"curAmountLabel",M,this),i(this,"getAmountLabel",k,this),i(this,"goOnButton",x,this),i(this,"cannotGetLayout",O,this),i(this,"getLayout",S,this),i(this,"airdropButton",U,this),i(this,"airDropLayer",E,this),i(this,"closeButton",N,this),i(this,"content",j,this),this._getAmount=0}get serverConfig(){return g.instance.serverConfig}async onInit(){}async onShow(t){const e=t.curAmount>=t.detailInfo.amount;this.airDropLayer.active=!1,this.getLayout.active=e,this.cannotGetLayout.active=!e,this.targetLabel.string=t.detailInfo.amount.toString(),this.curAmountLabel.string=t.curAmount.toFixed(2),this.getAmountLabel.string=t.curAmount.toFixed(2),this._getAmount=t.curAmount;let i="",n=0;for(const e in t.detailInfo){const o=t.detailInfo[e];if("object"!=typeof o)continue;let a="0";o.finish&&o.amount&&(a=o.amount.toFixed(2)),n>0&&(i+=" + "),i+=`${a}`,n++}this.detailLabel.string=i;const o=g.instance.serverConfig.cashOutConfig,r=[o.type_1,o.type_2,o.type_3];let l=this.getLayout.getComponentsInChildren(a);console.log("btns",l),l.forEach(((t,e)=>{t.interactable=r[e]}))}async onHide(t){}showLayer(){this.airDropLayer.active=!0,s.show(this.content,{type:"scale",duration:.3})}async hideLayer(){await s.hide(this.content,{type:"scale",duration:.3}),this.airDropLayer.active=!1}start(){let t=this.getLayout.getComponentsInChildren(a);t=t.concat([this.closeButton,this.airdropButton,this.goOnButton]),console.log("btns",t),u.ListenBtnsClick(t,((t,e)=>{switch(p.playSFX(b.click),t.node.name){case"closeButton":case"goOnButton":this.hideLayer();break;case"airdropButton":this.showLayer();break;case"getButton1":case"getButton2":case"getButton3":this.getMoney(t.node.name)}}),this)}onEnable(){}onDisable(){}async _runDrawAnimation(){}update(t){}getMoney(t){c.soloFunction((async()=>{await g.instance.getMoney(this._getAmount,t)}),"getMoney")}}).prototype,"detailLabel",[d],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),I=e(F.prototype,"targetLabel",[f],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),M=e(F.prototype,"curAmountLabel",[m],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),k=e(F.prototype,"getAmountLabel",[L],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),x=e(F.prototype,"goOnButton",[A],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),O=e(F.prototype,"cannotGetLayout",[w],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),S=e(F.prototype,"getLayout",[B],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),U=e(F.prototype,"airdropButton",[z],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),E=e(F.prototype,"airDropLayer",[v],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),N=e(F.prototype,"closeButton",[D],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),j=e(F.prototype,"content",[_],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),C=F))||C));n._RF.pop()}}}));
+
+(function(r) {
+  r('virtual:///prerequisite-imports/Airdrop', 'chunks:///_virtual/Airdrop'); 
+})(function(mid, cid) {
+    System.register(mid, [cid], function (_export, _context) {
+    return {
+        setters: [function(_m) {
+            var _exportObj = {};
+
+            for (var _key in _m) {
+              if (_key !== "default" && _key !== "__esModule") _exportObj[_key] = _m[_key];
+            }
+      
+            _export(_exportObj);
+        }],
+        execute: function () { }
+    };
+    });
+});
